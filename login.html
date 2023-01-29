@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login form</title>
+    <style>
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="error"></p>
+    <form class="login">
+    <label for="username">Username</label><br>
+    <input type="text" name="username" id="username" placeholder="Enter your username">
+    <br><br>
+    <label for="password">Password</label><br>
+    <input type="password" name="password" id="password" placeholder="Enter your password">
+    <br><br>
+
+    <input type="submit" value="submit" >
+</form>
+<script>
+           let login_form  = document.querySelector('.login');
+            let error = document.querySelector('.error');
+           
+         
+          let username = document.querySelector('#username');
+          let login_password = document.querySelector('#password');
+
+          login_form.addEventListener('submit', loginForm)
+          function loginForm(e){
+            e.preventDefault();
+            
+            let name= username.value;
+            let password = login_password.value;
+            if(username.length<8){
+                error.innerHTML="username should be at least 8 character"
+            }
+            else if(password.length<6){
+                error.innerHTML = "password  should be at least 8 character"
+            }
+            else{
+                error.innerHTML="login Successfully"
+                window.location.href="/index.html"
+            } 
+          }
+</script>
+</body>
+
+</html>
