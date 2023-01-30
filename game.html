@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .top-bar .leaderboard {
+            background-color: #fff;
+            color: #000;
+            padding: 5px;
+            border-radius: 5px;
+
+        }
+
+        .top-bar .leaderboard a {
+            text-decoration: none;
+            color: rgb(158, 20, 128);
+        }
+
+        .gameArea .startScreen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 90vh;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .hide {
+            display: none !important;
+        }
+
+        .car {
+            position: absolute;
+            height: 120px;
+            width: 60px;
+            bottom: 0px;
+            left: 0px;
+            /* margin: auto; */
+            background-image: url(./car.jpg);
+            background-size: cover;
+            vertical-align: middle;
+        }
+
+        .gameScreen {
+            background-color: #000;
+            height: 90vh;
+            position: relative;
+            /* overflow: hidden; */
+            margin: auto;
+            width: 300px;
+        }
+        .line{
+            position: absolute;
+            height: 80px;
+            width: 10px;
+            margin-left: 145px;
+            background-color: white;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="user-name">Hirendra</div>
+       <div class="score-section">
+           Score: <span class="score">0</span>
+       </div>
+       <div class="lives">Highest Score: 2478</div>
+       <div class="leaderboard">
+           <a href="#">LeaderBoard</a>
+       </div>
+   </div>
+   <div class="gameArea">
+         <div class="startScreen">
+            <h1>Welcome to Game Screen</h1>
+            <p> Click anywhere to start the game</p>
+         </div>
+         <div class="gameScreen hide">
+         </div>
+   </div>
+
+   <script src="./script.js">
+         
+   </script>
+       
+</body>
+
+</html>
